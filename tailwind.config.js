@@ -7,7 +7,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Poppins' : ['Poppins', 'sans-serif']
+        'Poppins' : ['Poppins', 'sans-serif'],
+        'Roboto' : ['Roboto', 'sans-serif']
+      },
+      backgroundImage: {
+        'payday': "url('/assets/img/payfinal.jpg')",
+        'hero': "url('/assets/img/hero.png')",
+      },
+      dropShadow: {
+        'app': '0px 4px 60px rgba(0, 0, 0, 0.25)',
       },
       colors: {
         'main': '#e6c744',
