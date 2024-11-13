@@ -36,6 +36,9 @@
 @tailwind utilities;
 
 @layer utilities{
-    .back-pay {@apply bg-payday bg-contain bg-no-repeat bg-[-50px];};
+    .back-pay {@apply bg-payday bg-contain bg-no-repeat bg-left-bottom 2xl:bg-[-80px];};
     .back-hero {@apply bg-hero bg-contain bg-no-repeat bg-right-bottom bg-origin-content;};
+    .anim-delay-2s {animation-delay: 2000ms;}
+    .anim-delay-4s {animation-delay: 4000ms;}
+    .anim-delay-6s {animation-delay: 6000ms;}
 }
