@@ -21,8 +21,8 @@ module.exports = {
         'content-payday':'clamp(1.125rem, 0.125rem + 5vw, 1.5rem)',
       },
       backgroundImage: {
-        'payday': "url('/assets/img/pay.webp')",
-        'hero': "url('/assets/img/hero.webp')",
+        'payday': "url('../../assets/img/pay.webp')",
+        'hero': "url('../../assets/img/hero.webp')",
       },
       dropShadow: {
         'app': '0px 4px 60px rgba(0, 0, 0, 0.25)',
