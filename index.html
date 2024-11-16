@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page made with Tailwind CSS">
     <meta property="og:title" content="Fashion Shopping">
     <meta property="og:description" content="Landing page made with Tailwind CSS">
     <meta property="og:image" content="https://fashion-shopping-landing.pages.dev/assets/img/share.jpg">
@@ -26,14 +27,14 @@
                 </svg>
                 <h1 class="text-[32px] 2xl:text-[40px]">FASHION</h1>
             </a>
-            <div id="menu" class="menu font-medium text-[18px] 2xl:text-[22px] gap-[45px] 2xl:gap-[54px] tracking-tight">
-                <ul class="flex gap-[50px] 2xl:gap-[65px] opacity-0 lg:opacity-100 flex-col lg:flex-row items-center justify-center">
+            <div id="menu" class="menu font-medium text-[18px] 2xl:text-[22px] gap-[45px] 2xl:gap-[54px] tracking-tight group">
+                <ul class="flex gap-[50px] 2xl:gap-[65px] opacity-0 lg:opacity-100 flex-col lg:flex-row items-center justify-center group-[.show]:opacity-100 transition-[opacity] duration-100 group-[.show]:duration-200 group-[.show]:delay-200">
                     <li><a href="" class="hover:border-b-4 border-main transition-all">CATALOGUE</a></li>
                     <li><a href="" class="hover:border-b-4 border-main transition-all">FASHION</a></li>
                     <li><a href="" class="hover:border-b-4 border-main transition-all">FAVOURITE</a></li>
                     <li><a href="" class="hover:border-b-4 border-main transition-all">LIFESTYLE</a></li>
                 </ul>
-                <button class="text-[20px] 2xl:text-[24px] rounded-[7px] w-[120px] 2xl:w-[164px] h-[50px] 2xl:h-[60px] text-white bg-black tracking-tighter cursor-pointer opacity-0 lg:opacity-100">SIGN UP</button>
+                <button class="text-[20px] 2xl:text-[24px] rounded-[7px] w-[120px] 2xl:w-[164px] h-[50px] 2xl:h-[60px] text-white bg-black tracking-tighter cursor-pointer opacity-0 group-[.show]:opacity-100 lg:opacity-100 transition-[opacity] duration-100 group-[.show]:duration-200 group-[.show]:delay-200">SIGN UP</button>
             </div>
             <div class="navbar__button lg:hidden cursor-pointer" id="navButton">
                 <svg class="burger" viewBox="0 0 100 100">
