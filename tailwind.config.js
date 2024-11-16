@@ -10,6 +10,16 @@ module.exports = {
         'Poppins' : ['Poppins', 'sans-serif'],
         'Roboto' : ['Roboto', 'sans-serif']
       },
+      fontSize: {
+        'title-hero': 'clamp(2.5rem, -1.6667rem + 20.8333vw, 4.0625rem)',
+        'content-hero': 'clamp(1.25rem, -0.0833rem + 6.6667vw, 1.75rem)',
+        'title-card': 'clamp(1.75rem, 1.0833rem + 3.3333vw, 2rem)',
+        'subtitle-card': 'clamp(1.25rem, 0.5833rem + 3.3333vw, 1.5rem)',
+        'title-app': 'clamp(1.875rem, 0.5417rem + 6.6667vw, 2.375rem)',
+        'content-app': 'clamp(1rem, 0rem + 5vw, 1.375rem)',
+        'title-payday':'clamp(2.5rem, 0rem + 12.5vw, 3.4375rem)',
+        'content-payday':'clamp(1.125rem, 0.125rem + 5vw, 1.5rem)',
+      },
       backgroundImage: {
         'payday': "url('/assets/img/pay.webp')",
         'hero': "url('/assets/img/hero.webp')",
@@ -27,13 +37,28 @@ module.exports = {
           'from': { transform: 'translate(0px, -50%)' },
           'to': { transform: 'translate(15px, -50%)' }
         },
+        'wave-xxsmall': {
+          '0%': { width: '50vw',  opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { width: '100%', opacity: '1' },
+        },
+        'wave-xsmall': {
+          '0%': { width: '200px', height: '200px', opacity: '1' },
+          '50%': { opacity: '1' },
+          '100%': { width: '374px', height: '374px', opacity: '0' },
+        },
+        'wave-small': {
+          '0%': { width: '240px', height: '240px', opacity: '1' },
+          '50%': { opacity: '1' },
+          '100%': { width: '500px', height: '500px', opacity: '0' },
+        },
         'wave-medium': {
-          '0%': { width: '300px', height: '300px', opacity: '1' },
+          '0%': { width: '230px', height: '230px', opacity: '1' },
           '50%': { opacity: '1' },
           '100%': { width: '620px', height: '620px', opacity: '0' },
         },
-        'wave-big': {
-          '0%': { width: '420px', height: '420px', opacity: '1' },
+        'wave-large': {
+          '0%': { width: '310px', height: '310px', opacity: '1' },
           '50%': { opacity: '1' },
           '100%': { width: '740px', height: '740px', opacity: '0' },
         },

@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Fashion Shopping">
+    <meta property="og:description" content="Landing page made with Tailwind CSS">
+    <meta property="og:image" content="https://fashion-shopping-landing.pages.dev/assets/img/share.jpg">
+    <meta property="og:url" content="https://fashion-shopping-landing.pages.dev/">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/icons/favicon/site.webmanifest">
     <link rel="stylesheet" href="./src/css/output.css">
+    <script src="./src/js/script.js" defer></script>
+    <meta name="author" content="Erik Medina">
     <title>Fashion Shopping</title>
 </head>
 <body class="font-Poppins font-normal relative">
-    <nav class="absolute inset-x-0 top-0">
+    <nav class="absolute inset-x-0 top-0 z-50 bg-white">
         <div class="container h-[80px] 2xl:h-[120px] flex justify-between items-center">
             <a href="" class="font-black flex items-center gap-[13px]">
                 <svg class="w-[28px] h-[28px] 2xl:w-[32] 2xl:h-[32px]">
@@ -15,21 +26,36 @@
                 </svg>
                 <h1 class="text-[32px] 2xl:text-[40px]">FASHION</h1>
             </a>
-            <div class="font-medium text-[18px] 2xl:text-[22px] flex items-center gap-[45px] 2xl:gap-[54px] tracking-tight">
-                <ul class="flex gap-[50px] 2xl:gap-[65px]">
-                    <li><a href="">CATALOGUE</a></li>
-                    <li><a href="">FASHION</a></li>
-                    <li><a href="">FAVOURITE</a></li>
-                    <li><a href="">LIFESTYLE</a></li>
+            <div id="menu" class="menu font-medium text-[18px] 2xl:text-[22px] gap-[45px] 2xl:gap-[54px] tracking-tight">
+                <ul class="flex gap-[50px] 2xl:gap-[65px] opacity-0 lg:opacity-100 flex-col lg:flex-row items-center justify-center">
+                    <li><a href="" class="hover:border-b-4 border-main transition-all">CATALOGUE</a></li>
+                    <li><a href="" class="hover:border-b-4 border-main transition-all">FASHION</a></li>
+                    <li><a href="" class="hover:border-b-4 border-main transition-all">FAVOURITE</a></li>
+                    <li><a href="" class="hover:border-b-4 border-main transition-all">LIFESTYLE</a></li>
                 </ul>
-                <button class="text-[20px] 2xl:text-[24px] rounded-[7px] w-[120px] 2xl:w-[164px] h-[50px] 2xl:h-[60px] text-white bg-black tracking-tighter cursor-pointer">SIGN UP</button>
+                <button class="text-[20px] 2xl:text-[24px] rounded-[7px] w-[120px] 2xl:w-[164px] h-[50px] 2xl:h-[60px] text-white bg-black tracking-tighter cursor-pointer opacity-0 lg:opacity-100">SIGN UP</button>
+            </div>
+            <div class="navbar__button lg:hidden cursor-pointer" id="navButton">
+                <svg class="burger" viewBox="0 0 100 100">
+                    <path class="line line--one" d="M 50,35 H 30" />
+                    <path class="line line--two" d="M 50,35 H 70" />
+                    <path class="line line--three" d="M 50,50 H 30" />
+                    <path class="line line--four" d="M 50,50 H 70" />
+                    <path class="line line--five" d="M 50,65 H 30" />
+                    <path class="line line--six" d="M 50,65 H 70" />
+                </svg>
+                <svg class="close" viewBox="0 0 100 100">
+                    <path class="line" d="M 34,32 L 66,68" />
+                    <path class="line" d="M 66,32 L 34,68" />
+                </svg>
             </div>
         </div>
     </nav>
+
     <header class="">
-        <div class="container min-h-screen portrait:min-h-[850px] pt-[80px] 2xl:pt-[120px] portrait:pt-[140px] flex items-center">
-            <div class="bg-braight-grey rounded-[40px] 2xl:rounded-[60px] flex flex-col justify-between pl-[100px] pt-[50px] 2xl:pt-[60px] pr-[60px] gap-[20px] 2xl:gap-[50px] w-full back-hero relative">
-                <h2 class="text-[60px] 2xl:text-[86px] font-black leading-[1.2]">
+        <div class="container min-h-screen md:min-h-0 pt-[80px] 2xl:pt-[120px] flex items-center">
+            <div class="bg-braight-grey rounded-[40px] 2xl:rounded-[60px] flex flex-col justify-between pl-[10%] md:pl-[60px] xl:pl-[100px] pt-[50px] 2xl:pt-[60px] pr-[60px] gap-[6vw] md:gap-[20px] 2xl:gap-[50px] w-full md:back-hero relative">
+                <h2 class="text-title-hero md:text-[55px] xl:text-[60px] 2xl:text-[86px] font-black leading-[1.2]">
                     <span class="before:block before:absolute before:-left-5 before:-right-2/3 before:-top-2 before:bottom-0 before:-rotate-2 before:bg-white relative inline-block">
                         <span class="relative">LET’S</span>
                     </span>
@@ -39,74 +65,86 @@
                     </span>
                     <span class="block">CLOTHES.</span>
                 </h2>
-                <p class="text-[22px] 2xl:text-[28px] tracking-tighter">Live for Influential and Innovative fashion!</p>
-                <button class="font-medium text-[20px] 2xl:text-[26px] tracking-tighter w-[180px] 2xl:w-[220px] h-[60px] 2xl:h-[80px] bg-black text-white rounded-[10px] cursor-pointer mb-[60px]">Shop Now</button>
-                <svg width="56" height="51" class="absolute top-[8%] left-[45%] text-[#E7E6E6]">
+                <p class="text-content-hero md:text-[20px] xl:text-[22px] 2xl:text-[28px] tracking-tighter">Live for Influential and Innovative fashion!</p>
+                <button class="font-medium text-content-hero md:text-[20px] 2xl:text-[26px] tracking-tighter w-[80%] h-auto py-[7%] md:py-0 md:w-[180px] 2xl:w-[220px] md:h-[60px] 2xl:h-[80px] bg-black text-white rounded-[10px] cursor-pointer mb-[60px]">Shop Now</button>
+                <svg width="56" height="51" class="absolute hidden md:block top-[8%] left-[55%] lg:left-[45%] text-[#E7E6E6]">
                     <use href="./assets/icons/icons.svg#star2"></use>
                 </svg>
-                <svg width="56" height="51" class="absolute bottom-[3%] left-[47%] text-[#E7E6E6]">
+                <svg width="56" height="51" class="absolute hidden md:block bottom-[3%] md:left-[58%] lg:left-[47%] text-[#E7E6E6]">
                     <use href="./assets/icons/icons.svg#star2"></use>
                 </svg>
-                <svg width="56" height="51" class="absolute top-[11%] right-[13%] text-[#E7E6E6]">
+                <svg width="56" height="51" class="absolute top-[11%] right-[13%] text-[#E7E6E6] hidden lg:block">
                     <use href="./assets/icons/icons.svg#star2"></use>
                 </svg>
-                <svg width="56" height="51" class="absolute bottom-[9%] right-[4%] text-[#E7E6E6]">
+                <svg width="56" height="51" class="absolute bottom-[9%] right-[4%] text-[#E7E6E6] hidden lg:block">
                     <use href="./assets/icons/icons.svg#star2"></use>
                 </svg>
             </div>
         </div>
     </header>
-    <section class="bg-main mt-[40px] mb-[80px]">
-        <div class="container h-[185px] flex justify-evenly items-center">
-            <img src="./assets/img/sponsor_a.png" alt="" class="mix-blend-multiply">
-            <img src="./assets/img/sponsor_b.png" alt="" class="mix-blend-multiply">
-            <img src="./assets/img/sponsor_c.png" alt="" class="mix-blend-multiply">
-            <img src="./assets/img/sponsor_d.png" alt="" class="mix-blend-multiply">
-            <img src="./assets/img/sponsor_e.png" alt="" class="mix-blend-multiply">
-            <img src="./assets/img/sponsor_f.png" alt="" class="mix-blend-multiply">
+
+    <section class=" bg-main mt-[40px] mb-[80px]">
+        <div class="container py-[30px] lg:py-0 lg:min-h-[185px] flex items-center relative overflow-hidden fufu before:absolute before:inset-y-0 before:left-0 before:w-[20px] before:z-10 before:bg-gradient-to-l after:absolute after:inset-y-0 after:right-0 after:w-[20px] after:bg-gradient-to-r from-transparent to-main">
+            <div class=" bg-main h-full flex items-center shrink-0 gap-[5px] md:gap-[50px] 2xl:gap-[100px] animate-[slideSmall_15s_linear_infinite] md:animate-[slideMedium_15s_linear_infinite] 2xl:animate-[slideLarge_15s_linear_infinite]">
+                <img src="./assets/img/sponsor_a.png" alt="" class="mix-blend-multiply shrink-0 w-[60px] md:w-auto lg:w-[100px] xl:w-auto">
+                <img src="./assets/img/sponsor_b.png" alt="" class="mix-blend-multiply shrink-0 w-[105px] md:w-auto lg:w-[145px] xl:w-auto">
+                <img src="./assets/img/sponsor_c.png" alt="" class="mix-blend-multiply shrink-0 w-[125px] md:w-auto lg:w-[165px] xl:w-auto">
+                <img src="./assets/img/sponsor_d.png" alt="" class="mix-blend-multiply shrink-0 w-[180px] md:w-auto lg:w-[220px] xl:w-auto">
+                <img src="./assets/img/sponsor_e.png" alt="" class="mix-blend-multiply shrink-0 w-[75px] md:w-auto lg:w-[115px] xl:w-auto">
+                <img src="./assets/img/sponsor_f.png" alt="" class="mix-blend-multiply shrink-0 w-[115px] md:w-auto lg:w-[155px] xl:w-auto">
+                <img src="./assets/img/sponsor_a.png" alt="" class="mix-blend-multiply shrink-0 w-[60px] md:w-auto lg:w-[100px] xl:w-auto">
+                <img src="./assets/img/sponsor_b.png" alt="" class="mix-blend-multiply shrink-0 w-[105px] md:w-auto lg:w-[145px] xl:w-auto">
+                <img src="./assets/img/sponsor_c.png" alt="" class="mix-blend-multiply shrink-0 w-[125px] md:w-auto lg:w-[165px] xl:w-auto">
+                <img src="./assets/img/sponsor_d.png" alt="" class="mix-blend-multiply shrink-0 w-[180px] md:w-auto lg:w-[220px] xl:w-auto">
+                <img src="./assets/img/sponsor_e.png" alt="" class="mix-blend-multiply shrink-0 w-[75px] md:w-auto lg:w-[115px] xl:w-auto">
+                <img src="./assets/img/sponsor_f.png" alt="" class="mix-blend-multiply shrink-0 w-[115px] md:w-auto lg:w-[155px] xl:w-auto">
+            </div>
         </div>
     </section>
-    <section class="mb-[100px]">
-        <div class="container mb-[80px] flex flex-col gap-[90px]">
+
+    <section class=" mb-[100px]">
+        <div class="container mb-[80px] flex flex-col gap-[50px] md:gap-[70px] xl:gap-[90px]">
             <div class="relative inline-block pr-[10px] self-start">
-                <h2 class="font-black text-[40px] 2xl:text-[48px]">NEW ARRIVALS</h2>
-                <svg width="190" height="32" class="text-main absolute right-0 top-[45%] -z-10">
-                    <use href="./assets/icons/icons.svg#shape"></use>
-                </svg>
+                <h2 class="font-black text-[32px] xl:text-[40px] 2xl:text-[48px]">NEW <span class="relative">
+                    ARRIVALS
+                    <svg class="w-[70%] h-[32px] text-main absolute right-[-3%] top-[35%] -z-10">
+                        <use href="./assets/icons/icons.svg#shape"></use>
+                    </svg>
+                </span></h2>
             </div>
-            <div class="flex justify-between">
-                <div class="w-full max-w-[380px] 2xl:max-w-[450px] font-medium flex flex-col gap-[28px] group">
+            <div class="flex flex-wrap justify-between gap-[50px] md:gap-0">
+                <div class="w-full md:w-[240px] lg:w-[320px] xl:w-[380px] 2xl:w-[450px] font-medium flex flex-col items-center md:items-start gap-[28px] group">
                     <a href="#">
                         <img src="./assets/img/arrival_a.webp" alt="" class="rounded-[20px]">
                     </a>
-                    <div class="relative">
-                        <a href="#"><h3 class="text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Hoodies & Sweetshirt</h3></a>
-                        <span class="text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
-                        <svg class="absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
+                    <div class="relative text-center lg:text-left w-full">
+                        <a href="#"><h3 class="text-title-card  md:text-[24px] xl:text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Hoodies & Sweetshirt</h3></a>
+                        <span class="text-subtitle-card md:text-[20px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
+                        <svg class="hidden lg:block absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
                             <use href="./assets/icons/icons.svg#arrow-right"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="w-full max-w-[380px] 2xl:max-w-[450px] font-medium flex flex-col gap-[28px] group">
+                <div class="w-full md:w-[240px] lg:w-[320px] xl:w-[380px] 2xl:w-[450px] font-medium flex flex-col items-center md:items-start gap-[28px] group">
                     <a href="#">
                         <img src="./assets/img/arrival_b.webp" alt="" class="rounded-[20px]">
                     </a>
-                    <div class="relative">
-                        <a href="#"><h3 class="text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Coats & Parkas</h3></a>
-                        <span class="text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
-                        <svg class="absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
+                    <div class="relative text-center lg:text-left w-full">
+                        <a href="#"><h3 class="text-title-card md:text-[24px] xl:text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Coats & Parkas</h3></a>
+                        <span class="text-subtitle-card md:text-[20px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
+                        <svg class="hidden lg:block absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
                             <use href="./assets/icons/icons.svg#arrow-right"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="w-full max-w-[380px] 2xl:max-w-[450px] font-medium flex flex-col gap-[28px] group">
+                <div class="w-full md:w-[240px] lg:w-[320px] xl:w-[380px] 2xl:w-[450px] font-medium flex flex-col items-center md:items-start gap-[28px] group">
                     <a href="#">
                         <img src="./assets/img/arrival_c.webp" alt="" class="rounded-[20px]">
                     </a>
-                    <div class="relative">
-                        <a href="#"><h3 class="text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Tees & T-Shirt</h3></a>
-                        <span class="text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
-                        <svg class="absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
+                    <div class="relative text-center lg:text-left w-full">
+                        <a href="#"><h3 class="text-title-card md:text-[24px] xl:text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Tees & T-Shirt</h3></a>
+                        <span class="text-subtitle-card md:text-[20px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
+                        <svg class="hidden lg:block absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
                             <use href="./assets/icons/icons.svg#arrow-right"></use>
                         </svg>
                     </div>
@@ -115,24 +153,24 @@
         </div>
     </section>
 
-    <section class="h-[600px] 2xl:h-[800px] relative mb-[80px]">
-        <div class="absolute w-1/2 inset-y-0 left-0 bg-[#ffec62] -z-10"></div>
-        <div class="absolute w-1/2 inset-y-0 right-0 bg-gradient-to-b from-[#f9df56] via-[#f5d951] to-[#e7cb44] -z-10"></div>
-        <div class="container back-pay h-full flex justify-end relative">
-            <div class="basis-1/2 text-[24px] 2xl:text-[32px] flex flex-col gap-[20px] 2xl:gap-[25px] justify-center pl-[60px]">
-                <svg width="62" height="62" class="absolute top-[18%] left-[7%] 2xl:left-[2%] animate-spin-slow">
+    <section class=" h-[500px] xl:h-[600px] 2xl:h-[800px] relative mb-[80px]">
+        <div class="absolute hidden md:block w-1/2 inset-y-0 left-0 bg-[#ffec62] -z-10"></div>
+        <div class="absolute w-full md:w-1/2 inset-y-0 right-0 bg-gradient-to-b from-[#f9df56] via-[#f5d951] to-[#e7cb44] -z-10"></div>
+        <div class="container md:back-pay h-full flex justify-end relative">
+            <div class="text-center md:text-left basis-full md:basis-1/2 text-content-payday md:text-[18px] lg:text-[20px] xl:text-[24px] 2xl:text-[32px] flex flex-col gap-[20px] 2xl:gap-[25px] justify-center items-center md:items-start md:pl-[40px] lg:pl-[60px]">
+                <svg class="hidden md:block w-[50px] h-[50px] xl:w-[62px] xl:h-[62px] absolute top-[18%] left-[2%] lg:left-[7%] 2xl:left-[2%] animate-spin-slow">
                     <use href="./assets/icons/icons.svg#star"></use>
                 </svg>
-                <svg width="62" height="62" class="absolute top-[10%] left-[38%] 2xl:left-[36%] animate-spin-slow">
+                <svg class="hidden md:block w-[50px] h-[50px] xl:w-[62px] xl:h-[62px] absolute top-[10%] left-[38%] 2xl:left-[36%] animate-spin-slow">
                     <use href="./assets/icons/icons.svg#star"></use>
                 </svg>
-                <svg width="62" height="62" class="absolute top-[60%] left-[9%] 2xl:left-[5%] animate-spin-slow">
+                <svg class="hidden md:block w-[50px] h-[50px] xl:w-[62px] xl:h-[62px] absolute top-[60%] left-[4%] lg:left-[9%] 2xl:left-[5%] animate-spin-slow">
                     <use href="./assets/icons/icons.svg#star"></use>
                 </svg>
-                <svg width="62" height="62" class="absolute top-[68%] left-[41%] 2xl:left-[39%] animate-spin-slow">
+                <svg class="hidden md:block w-[50px] h-[50px] xl:w-[62px] xl:h-[62px] absolute top-[68%] left-[41%] 2xl:left-[39%] animate-spin-slow">
                     <use href="./assets/icons/icons.svg#star"></use>
                 </svg>
-                <h2 class="text-[60px] 2xl:text-[90px] font-black leading-[1.2]">
+                <h2 class="text-title-payday md:text-[40px] lg:text-[50px] xl:text-[60px] 2xl:text-[90px] font-black leading-[1.2]">
                     <span class="before:block before:absolute before:-left-5 before:-right-4 before:-top-2 before:bottom-0 before:-rotate-2 before:bg-white relative inline-block">
                         <span class="relative">PAYDAY</span>
                     </span>
@@ -146,35 +184,37 @@
         </div>
     </section>
 
-    <section class="mb-[120px]">
-        <div class="container mb-[80px] flex flex-col gap-[90px]">
+    <section class="mb-[70px] md:mb-[120px]">
+        <div class="container flex flex-col gap-[50px] md:gap-[70px] xl:gap-[90px]">
             <div class="relative inline-block pr-[10px] self-start">
-                <h2 class="font-black text-[40px] 2xl:text-[48px]">Young’s Favourite</h2>
-                <svg width="190" height="32" class="text-main absolute right-0 top-[45%] -z-10">
-                    <use href="./assets/icons/icons.svg#shape"></use>
-                </svg>
+                <h2 class="font-black text-[32px] xl:text-[40px] 2xl:text-[48px]">Young’s <span class="relative">Favourite
+
+                    <svg class="w-[70%] h-[32px] text-main absolute right-[-3%] top-[35%] -z-10">
+                        <use href="./assets/icons/icons.svg#shape"></use>
+                    </svg>
+                </span></h2>
             </div>
-            <div class="flex justify-between">
-                <div class="w-full max-w-[600px] 2xl:max-w-[720px] font-medium flex flex-col gap-[28px] group">
+            <div class="flex flex-wrap gap-[40px] md:gap-0 md:gap-0 justify-between">
+                <div class="w-full md:w-[365px] lg:w-[480px] xl:w-[600px] 2xl:w-[720px] font-medium flex flex-col gap-[28px] group">
                     <a href="#">
                         <img src="./assets/img/young_a.webp" alt="" class="rounded-[20px]">
                     </a>
                     <div class="relative">
-                        <a href="#"><h3 class="text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Trending on Instagram</h3></a>
-                        <span class="text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
-                        <svg class="absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
+                        <a href="#"><h3 class="text-title-card md:text-[24px] xl:text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">Trending on Instagram</h3></a>
+                        <span class="text-subtitle-card md:text-[20px] xl:text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
+                        <svg class="hidden md:block absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
                             <use href="./assets/icons/icons.svg#arrow-right"></use>
                         </svg>
                     </div>
                 </div>
-                <div class="w-full max-w-[600px] 2xl:max-w-[720px] font-medium flex flex-col gap-[28px] group">
+                <div class="w-full md:w-[365px] lg:w-[480px] xl:w-[600px] 2xl:w-[720px] font-medium flex flex-col gap-[28px] group">
                     <a href="#">
                         <img src="./assets/img/young_b.webp" alt="" class="rounded-[20px]">
                     </a>
                     <div class="relative">
-                        <a href="#"><h3 class="text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">All Under $40</h3></a>
-                        <span class="text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
-                        <svg class="absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
+                        <a href="#"><h3 class="text-title-card md:text-[24px] xl:text-[28px] 2xl:text-[32px] text-[#191919] tracking-tighter">All Under $40</h3></a>
+                        <span class="text-subtitle-card md:text-[20px] xl:text-[22px] 2xl:text-[24px] text-[#7f7f7f] tracking-tighter">Explore Now!</span>
+                        <svg class="hidden md:block absolute right-[20px] top-1/2 -translate-y-1/2 group-hover:animate-move-slow w-[30px] h-[20px] 2xl:w-[34px] 2xl:h-[24px]">
                             <use href="./assets/icons/icons.svg#arrow-right"></use>
                         </svg>
                     </div>
@@ -183,72 +223,70 @@
         </div>
     </section>
 
-
-    <section class="mb-[120px]">
-        <div class="container flex">
-            <div class="flex flex-col gap-[35px] basis-1/2 items-start justify-center pl-[120px]">
-                <h2 class="font-black text-[42px] tracking-tighter leading-normal">DOWNLOAD APP & <span class="block">GET THE VOUCHER!</span></h2>
-                <p class="font-medium text-[22px] tracking-tighter">Get 30% off for first transaction using <span class="block">Rondovision mobile app for now.</span></p>
-                <div class="flex gap-[20px]">
-                    <a href=""><img src="./assets/img/appstore.webp" alt=""></a>
-                    <a href=""><img src="./assets/img/gplay.webp" alt=""></a>
+    <section class="mb-[70px] md:mb-[120px]">
+        <div class="container flex flex-col md:flex-row">
+            <div class="flex flex-col gap-[35px] basis-1/2 items-center md:items-start justify-center lg:pl-[80px] xl:pl-[120px]">
+                <h2 class="font-black text-title-app md:text-[30px] lg:text-[34px] xl:text-[42px] tracking-tighter leading-normal">DOWNLOAD APP & <span class="block">GET THE VOUCHER!</span></h2>
+                <p class="font-medium text-content-app md:text-[16px] lg:text-[18px] xl:text-[22px] tracking-tighter">Get 30% off for first transaction using <span class="block">Rondovision mobile app for now.</span></p>
+                <div class="flex gap-[10px] xl:gap-[20px]">
+                    <a href=""><img src="./assets/img/appstore.webp" alt="" class="w-[150px] lg:w-[170px] xl:w-auto"></a>
+                    <a href=""><img src="./assets/img/gplay.webp" alt="" class="w-[150px] lg:w-[170px] xl:w-auto"></a>
                 </div>
             </div>
-            <div class="basis-1/2 flex justify-center relative">
+            <div class="w-full md:w-1/2 flex justify-center relative mt-[60px] md:mt-0">
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-medium_6s_linear_infinite_6s] 2xl:animate-[wave-big_6s_linear_infinite_6s]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="48 48 504 504" class="w-[100px] aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-xxsmall_6s_linear_infinite_6s] md:animate-[wave-xsmall_6s_linear_infinite_6s] lg:animate-[wave-small_6s_linear_infinite_6s] xl:animate-[wave-medium_6s_linear_infinite_6s] 2xl:animate-[wave-large_6s_linear_infinite_6s]">
                     <path id="ellipsePath4" d="M 300,50 A 250,250 0 1,0 300,550 A 250,250 0 1,0 300,50" fill="none" stroke="currentcolor" stroke-width="2.5"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-medium_6s_linear_infinite_4s] 2xl:animate-[wave-big_6s_linear_infinite_4s] ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="48 48 504 504" class="w-[100px] aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-xxsmall_6s_linear_infinite_4s] md:animate-[wave-xsmall_6s_linear_infinite_4s] lg:animate-[wave-small_6s_linear_infinite_4s] xl:animate-[wave-medium_6s_linear_infinite_4s] 2xl:animate-[wave-large_6s_linear_infinite_4s]">
                     <path id="ellipsePath4" d="M 300,50 A 250,250 0 1,0 300,550 A 250,250 0 1,0 300,50" fill="none" stroke="currentcolor" stroke-width="2.5"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-medium_6s_linear_infinite_2s] 2xl:animate-[wave-big_6s_linear_infinite_2s]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="48 48 504 504" class="w-[100px] aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-xxsmall_6s_linear_infinite_2s] md:animate-[wave-xsmall_6s_linear_infinite_2s] lg:animate-[wave-small_6s_linear_infinite_2s] xl:animate-[wave-medium_6s_linear_infinite_2s] 2xl:animate-[wave-large_6s_linear_infinite_2s]">
                     <path id="ellipsePath4" d="M 300,50 A 250,250 0 1,0 300,550 A 250,250 0 1,0 300,50" fill="none" stroke="currentcolor" stroke-width="2.5"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-medium_6s_linear_infinite] 2xl:animate-[wave-big_6s_linear_infinite]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="48 48 504 504" class="w-[100px] aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#dbdbdb] animate-[wave-xxsmall_6s_linear_infinite] md:animate-[wave-xsmall_6s_linear_infinite] lg:animate-[wave-small_6s_linear_infinite] xl:animate-[wave-medium_6s_linear_infinite] 2xl:animate-[wave-large_6s_linear_infinite]">
                     <path id="ellipsePath4" d="M 300,50 A 250,250 0 1,0 300,550 A 250,250 0 1,0 300,50" fill="none" stroke="currentcolor" stroke-width="2.5"/>
                 </svg>
 
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[5%] right-[20px] 2xl:right-[12%] text-main">
+                <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] absolute top-[5%] right-[5%] lg:right-[10%] 2xl:right-[12%] text-main">
                     <ellipse cx="25" cy="25" rx="25" ry="25" stroke="none" fill="currentcolor"/>
                 </svg>
-                <svg width="35" height="35" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-[2%] left-[5%] text-main">
+                <svg width="35" height="35" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-[2%] left-[5%] md:left-[7%] 2xl:left-[5%] text-main">
                     <ellipse cx="25" cy="25" rx="25" ry="25" stroke="none" fill="currentcolor"/>
                 </svg>
-                <svg width="25" height="25" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[5%] left-[8%] text-[#89807A]">
+                <svg width="25" height="25" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[5%] left-[5%] md:left-[10%] 2xl:left-[8%] text-[#89807A]">
                     <ellipse cx="25" cy="25" rx="25" ry="25" stroke="none" fill="currentcolor"/>
                 </svg>
-                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-[10%] right-[10px] 2xl:right-[8%] text-[#89807A]">
+                <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-[10%] right-[7%] 2xl:right-[8%] text-[#89807A]">
                     <ellipse cx="25" cy="25" rx="25" ry="25" stroke="none" fill="currentcolor"/>
                 </svg>
                 
-                <img src="./assets/img/app.jpg" alt="" class="rounded-[34px] h-auto w-[240px] 2xl:w-[320px] outline outline-[#C2C8DA] outline-[18px] 2xl:outline-[22px] drop-shadow-app hover:outline-[#e3d7a7] transition-all">
+                <img src="./assets/img/app.jpg" alt="" class=" rounded-[34px] h-auto w-[50vw] md:w-[180px] lg:w-[200px] xl:w-[240px] 2xl:w-[320px] outline outline-[#C2C8DA] outline-[10px] md:outline-[15px] lg:outline-[18px] 2xl:outline-[22px] drop-shadow-app hover:outline-[#e3d7a7] transition-all">
             </div>
         </div>
     </section>
 
-
-    <section class="bg-main h-[500px] 2xl:h-[600px]">
+    <section class=" bg-main py-[50px] md:py-0 md:h-[400px] lg:h-[500px] 2xl:h-[600px]">
         <div class="container h-full flex flex-col items-center justify-center text-center gap-[20px] 2xl:gap-[30px]">
-            <h2 class="font-black text-[40px] 2xl:text-[50px] text-white leading-tight tracking-tight">JOIN SHOPPING COMMUNITY TO <span class="block">GET MONTHLY PROMO</span></h2>
+            <h2 class="font-black text-[35px] lg:text-[40px] 2xl:text-[50px] text-white leading-tight tracking-tight">JOIN SHOPPING COMMUNITY TO <span class="block">GET MONTHLY PROMO</span></h2>
             <p class="text-[20px] 2xl:text-[28px] text-white tracking-tight">Type your email down below and be young wild generation</p>
-            <form action="" class="w-[575px] h-[60px] 2xl:h-[80px] bg-white flex items-center px-[5px] 2xl:px-[10px] rounded-[10px] text-[20px] 2xl:text-[22px] gap-[10px]">
+            <form action="" class="w-full md:w-[500px] lg:w-[575px] md:h-[60px] 2xl:h-[80px] bg-white flex flex-col md:flex-row items-center py-[5px] md:py-0 px-[5px] 2xl:px-[10px] rounded-[10px] text-[20px] 2xl:text-[22px] gap-[10px]">
                 <input type="email" class="grow h-[50px] 2xl:h-[60px] rounded-[8px] px-[10px]" placeholder="Add your email here">
-                <button type="submit" class=" w-[160px] h-[50px] 2xl:h-[60px] bg-black text-white font-medium text-[24px] 2xl:text-[33px] rounded-[8px]">SEND</button>
+                <button type="submit" class="w-full md:w-[160px] h-[50px] 2xl:h-[60px] bg-black text-white font-medium text-[24px] 2xl:text-[33px] rounded-[8px]">SEND</button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-black font-Roboto tracking-tight text-[20px] 2xl:text-[24px]">
-        <div class="container text-white flex h-[400px] 2xl:h-[540px] items-center">
-            <div class="flex flex-col items-start gap-[20px] 2xl:gap-[30px] basis-[45%]">
+    <footer class=" bg-black font-Roboto tracking-tight text-[20px] 2xl:text-[24px]">
+        <div class="container text-white flex flex-wrap py-[50px] gap-[40px] lg:gap-0 lg:py-0 lg:h-[400px] 2xl:h-[540px] items-center">
+            <div class="flex flex-col items-center lg:items-start gap-[20px] 2xl:gap-[30px] basis-full lg:basis-[45%]">
                 <a href="" class="font-black flex items-center gap-[13px] hover:text-main">
                     <svg width="32" height="30">
                         <use href="./assets/icons/icons.svg#logo"></use>
                     </svg>
                     <h2 class="text-[40px] font-Poppins">FASHION</h2>
                 </a>
-                <p class="text-[#8e8e8e]">Complete your style with awesome <br>clothes from us.</p>
+                <p class="text-[#8e8e8e] text-center lg:text-left">Complete your style with awesome <br class="hidden lg:block">clothes from us.</p>
                 <div class="flex text-black gap-[14px]">
                     <a  href="#" class="bg-main w-[30px] h-[30px] 2xl:w-[50px] 2xl:h-[50px] flex justify-center items-center rounded-[8px] 2xl:rounded-[15px] hover:bg-white transition-all">
                         <svg class="w-[10px] h-[22px] 2xl:w-[14px] 2xl:h-[26px]">
@@ -272,28 +310,52 @@
                     </a>
                 </div>
             </div>
-            <div class="text-[#8e8e8e] flex grow justify-between">
-                <div class="flex flex-col gap-[10px] 2xl:gap-[20px]">
-                    <h3 class="text-[#d9d9d9] ">Company</h3>
-                    <ul class="flex flex-col gap-[10px] 2xl:gap-[20px]">
+            <div class="text-[#8e8e8e] flex flex-col sm:flex-row grow justify-around lg:justify-between">
+                <div class="flex flex-col gap-[10px] 2xl:gap-[20px] group" data-name="acordeon">
+                    <div class="flex justify-between relative">
+                        <h3 class="text-[#d9d9d9] bg-black pr-[20px] relative z-10">Company</h3>
+                        <button class="sm:hidden bg-black relative z-10 text-white border-2 p-2 rounded-full" data-name="acordeon-button">
+                            <svg width="20" height="20" class="text-secondary pointer-events-none group-[.acordeon-active]:rotate-180 transition-all">
+                                <use href="./assets/icons/icons.svg#icon-arrowdown"></use>
+                            </svg> 
+                        </button>
+                        <hr class="h-[2px] bg-white absolute left-0 bottom-1/2 w-full sm:hidden">
+                    </div>
+                    <ul class="flex flex-col gap-[10px] 2xl:gap-[20px] overflow-hidden max-h-0 group-[.acordeon-active]:max-h-[700px] sm:max-h-[700px] group-[.acordeon-active]:mb-10 transition-all">
                         <li><a href="" class="hover:text-[#d9d9d9]">About</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">Contact us</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">Support</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">Careers</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col gap-[10px] 2xl:gap-[20px]">
-                    <h3 class="text-[#d9d9d9]">Quick Link</h3>
-                    <ul class="flex flex-col gap-[10px] 2xl:gap-[20px]">
+                <div class="flex flex-col gap-[10px] 2xl:gap-[20px] group" data-name="acordeon">
+                    <div class="flex justify-between relative">
+                        <h3 class="text-[#d9d9d9] bg-black pr-[20px] relative z-10">Quick Link</h3>
+                        <button class="sm:hidden bg-black relative z-10 text-white border-2 p-2 rounded-full" data-name="acordeon-button">
+                            <svg width="20" height="20" class="text-secondary pointer-events-none group-[.acordeon-active]:rotate-180 transition-all">
+                                <use href="./assets/icons/icons.svg#icon-arrowdown"></use>
+                            </svg> 
+                        </button>
+                        <hr class="h-[2px] bg-white absolute left-0 bottom-1/2 w-full sm:hidden">
+                    </div>
+                    <ul class="flex flex-col gap-[10px] 2xl:gap-[20px] overflow-hidden max-h-0 group-[.acordeon-active]:max-h-[700px] sm:max-h-[700px] group-[.acordeon-active]:mb-10 transition-all">
                         <li><a href="" class="hover:text-[#d9d9d9]">Share Location</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">Orders Tracking</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">Size Guide</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">FAQs</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col gap-[10px] 2xl:gap-[20px]">
-                    <h3 class="text-[#d9d9d9]">Legal</h3>
-                    <ul class="flex flex-col gap-[10px] 2xl:gap-[20px]">
+                <div class="flex flex-col gap-[10px] 2xl:gap-[20px] group" data-name="acordeon">
+                    <div class="flex justify-between relative">
+                        <h3 class="text-[#d9d9d9] bg-black pr-[20px] relative z-10">Legal</h3>
+                        <button class="sm:hidden bg-black relative z-10 text-white border-2 p-2 rounded-full" data-name="acordeon-button">
+                            <svg width="20" height="20" class="text-secondary pointer-events-none group-[.acordeon-active]:rotate-180 transition-all">
+                                <use href="./assets/icons/icons.svg#icon-arrowdown"></use>
+                            </svg> 
+                        </button>
+                        <hr class="h-[2px] bg-white absolute left-0 bottom-1/2 w-full sm:hidden">
+                    </div>
+                    <ul class="flex flex-col gap-[10px] 2xl:gap-[20px] overflow-hidden max-h-0 group-[.acordeon-active]:max-h-[700px] sm:max-h-[700px] transition-all">
                         <li><a href="" class="hover:text-[#d9d9d9]">Term & conditions</a></li>
                         <li><a href="" class="hover:text-[#d9d9d9]">Privacy Policy</a></li>
                     </ul>

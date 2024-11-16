@@ -36,9 +36,68 @@
 @tailwind utilities;
 
 @layer utilities{
-    .back-pay {@apply bg-payday bg-contain bg-no-repeat bg-left-bottom 2xl:bg-[-80px];};
-    .back-hero {@apply bg-hero bg-contain bg-no-repeat bg-right-bottom bg-origin-content;};
-    .anim-delay-2s {animation-delay: 2000ms;}
-    .anim-delay-4s {animation-delay: 4000ms;}
-    .anim-delay-6s {animation-delay: 6000ms;}
+    .back-pay {@apply bg-payday bg-contain bg-no-repeat bg-[-85px] lg:bg-left-bottom 2xl:bg-[-80px];};
+    .back-hero {@apply bg-hero bg-contain bg-no-repeat bg-[400px] xl:bg-right-bottom bg-origin-content;};
+
+    .navbar__button{
+        @apply h-[45px] w-[45px] bg-main rounded-[5px] text-black;
+    }
+    .navbar__button svg {
+        @apply pointer-events-none h-[45px] w-[45px] absolute;
+    }
+    .line {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 10px;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        transform-origin: 50%;
+        transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+    }
+    .close {
+        transform: scale(0);
+        transition: transform 300ms;
+    }
+    .active{
+        .line {transition: transform 400ms;}
+        .line--one {transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);}
+        .line--two {transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);}
+        .line--three {transform: translateY(0px) rotate(45deg) scale(.7);}
+        .line--four {transform: translateY(0px) rotate(-45deg) scale(.7);}
+        .line--five {transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);}
+        .line--six {transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);}
+        .close {
+            transition: transform 430ms 100ms;
+            transform: scale(1);
+        }
+    }
+    
+    .menu{
+        @apply absolute w-full lg:w-auto left-0 top-0 lg:relative flex flex-col items-center ;
+        @apply h-0 lg:h-auto justify-center lg:flex-row -z-10 lg:z-0 overflow-hidden bg-white;
+        transition: height 200ms 50ms ease-in;
+        ul,button {transition: opacity 100ms;}
+    }
+    .show{
+        &.menu{
+            height: 100vh;
+            transition: height 200ms ease-in;
+        }
+        ul,button{
+            opacity: 1;
+            transition: opacity 200ms 200ms;
+        }
+    }
+    @keyframes slideLarge {
+        from {transform: translateX(0);}
+        to {transform: translateX(calc(-50% - 50px));}
+    }
+    @keyframes slideMedium {
+        from {transform: translateX(0);}
+        to {transform: translateX(calc(-50% - 25px));}
+    }
+    @keyframes slideSmall {
+        from {transform: translateX(0);}
+        to {transform: translateX(calc(-50% - 2.5px));}
+    }
 }
