@@ -80,11 +80,11 @@
     }
     .show{
         &.menu{
-            height: 100vh;
+            @apply h-[100vh];
             transition: height 200ms ease-in;
         }
         ul,button{
-            opacity: 1;
+            @apply opacity-100;
             transition: opacity 200ms 200ms;
         }
     }
