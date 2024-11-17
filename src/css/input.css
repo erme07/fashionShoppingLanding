@@ -39,12 +39,6 @@
     .back-pay {@apply bg-payday bg-contain bg-no-repeat bg-[-85px] lg:bg-left-bottom 2xl:bg-[-80px];};
     .back-hero {@apply bg-hero bg-contain bg-no-repeat bg-[400px] xl:bg-right-bottom bg-origin-content;};
 
-    .navbar__button{
-        @apply h-[45px] w-[45px] bg-main rounded-[5px] text-black;
-    }
-    .navbar__button svg {
-        @apply pointer-events-none h-[45px] w-[45px] absolute;
-    }
     .line {
         fill: none;
         stroke: currentColor;
@@ -73,11 +67,11 @@
     }
     
     .menu{
-        @apply absolute w-full lg:w-auto left-0 top-0 lg:relative flex flex-col items-center ;
-        @apply h-0 lg:h-auto justify-center lg:flex-row -z-10 lg:z-0 overflow-hidden bg-white transition-[height] duration-200 ease-in delay-[50ms];
+        @apply absolute lg:w-auto inset-x-0 top-0 -translate-y-full lg:translate-y-0  h-screen lg:relative flex flex-col items-center ;
+        @apply lg:h-auto justify-center lg:flex-row -z-10 lg:z-0 overflow-hidden bg-white transition-[transform] duration-200 ease-in delay-[50ms];
     }
     .show.menu{
-        @apply h-[100vh] transition-[height] duration-200 delay-0 ease-in;
+        @apply translate-y-0 transition-[transform] duration-200 delay-0 ease-in;
     }
     @keyframes slideLarge {
         from {transform: translateX(0);}

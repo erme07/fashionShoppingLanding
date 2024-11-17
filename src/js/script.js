@@ -16,6 +16,7 @@ document.addEventListener('click', (e) =>{
     if(e.target.getAttribute("data-name") == "acordeon-button"){
         e.target.parentElement.parentElement.classList.toggle("acordeon-active")
     }
+    console.log(e.target)
 })
 
 document.addEventListener('scroll', () => {
