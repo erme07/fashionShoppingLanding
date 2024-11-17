@@ -38,29 +38,29 @@ module.exports = {
           'to': { transform: 'translate(15px, -50%)' }
         },
         'wave-xxsmall': {
-          '0%': { width: '50vw',  opacity: '1' },
+          '0%': { transform: 'scale(1)',  opacity: '1' },
           '90%': { opacity: '1' },
-          '100%': { width: '100%', opacity: '1' },
+          '100%': { transform: 'scale(1.8)', opacity: '0' },
         },
         'wave-xsmall': {
-          '0%': { width: '200px', height: '200px', opacity: '1' },
+          '0%': { transform: 'scale(1)', opacity: '1' },
           '50%': { opacity: '1' },
-          '100%': { width: '374px', height: '374px', opacity: '0' },
+          '100%': { transform: 'scale(1.87)', opacity: '0' },
         },
         'wave-small': {
-          '0%': { width: '240px', height: '240px', opacity: '1' },
+          '0%': { transform: 'scale(1)', opacity: '1' },
           '50%': { opacity: '1' },
-          '100%': { width: '500px', height: '500px', opacity: '0' },
+          '100%': { transform: 'scale(2.083)', opacity: '0' },
         },
         'wave-medium': {
-          '0%': { width: '230px', height: '230px', opacity: '1' },
+          '0%': { transform: 'scale(1)', opacity: '1' },
           '50%': { opacity: '1' },
-          '100%': { width: '620px', height: '620px', opacity: '0' },
+          '100%': { transform: 'scale(2.695)', opacity: '0' },
         },
         'wave-large': {
-          '0%': { width: '310px', height: '310px', opacity: '1' },
+          '0%': { transform: 'scale(1)', opacity: '1' },
           '50%': { opacity: '1' },
-          '100%': { width: '740px', height: '740px', opacity: '0' },
+          '100%': { transform: 'scale(2.385)', opacity: '0' },
         },
       },
       animation: {
