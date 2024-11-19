@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scrollbar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +18,9 @@
     <meta name="author" content="Erik Medina">
     <title>Fashion Shopping</title>
 </head>
-<body class="font-Poppins font-normal relative">
+<body class="font-Poppins font-normal relative overflow-x-hidden">
     <nav class="navbar fixed lg:absolute inset-x-0 top-0 z-50 bg-white" id="navbar">
-        <div class="container h-[80px] 2xl:h-[120px] flex justify-between items-center">
+        <div class="container h-[80px] 2xl:h-[120px] flex justify-between items-center overflow-hidden">
             <a href="" class="font-black flex items-center gap-[13px]">
                 <svg class="w-[28px] h-[28px] 2xl:w-[32] 2xl:h-[32px]">
                     <use href="./assets/icons/icons.svg#logo"></use>
@@ -36,20 +36,12 @@
                 </ul>
                 <button class="text-[20px] 2xl:text-[24px] rounded-[7px] w-[120px] 2xl:w-[164px] h-[50px] 2xl:h-[60px] text-white bg-black tracking-tighter cursor-pointer opacity-0 group-[.show]:opacity-100 lg:opacity-100 transition-[opacity] duration-100 group-[.show]:duration-200 group-[.show]:delay-200">SIGN UP</button>
             </div>
-            <div class="h-[45px] w-[45px] bg-main rounded-[5px] text-black lg:hidden cursor-pointer" id="navButton">
-                <svg class="pointer-events-none h-[45px] w-[45px] absolute" viewBox="0 0 100 100">
-                    <path class="line line--one" d="M 50,35 H 30" />
-                    <path class="line line--two" d="M 50,35 H 70" />
-                    <path class="line line--three" d="M 50,50 H 30" />
-                    <path class="line line--four" d="M 50,50 H 70" />
-                    <path class="line line--five" d="M 50,65 H 30" />
-                    <path class="line line--six" d="M 50,65 H 70" />
-                </svg>
-                <svg class="close pointer-events-none" viewBox="0 0 100 100">
-                    <path class="line" d="M 34,32 L 66,68" />
-                    <path class="line" d="M 66,32 L 34,68" />
-                </svg>
-            </div>
+            
+            <svg class="lg:hidden bars" viewBox="0 0 100 100" fill="none" id="navButton">
+                <path class="line top pointer-events-none" stroke="currentcolor" d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"></path>
+                <path class="line middle pointer-events-none" stroke="currentcolor" d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"></path>
+                <path class="line bottom pointer-events-none" stroke="currentcolor" d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"></path>
+            </svg>
         </div>
     </nav>
 
@@ -84,7 +76,7 @@
         </div>
     </header>
 
-    <section class=" bg-main mt-[40px] mb-[80px]">
+    <section class="bg-main mt-[40px] mb-[80px]">
         <div class="container py-[30px] lg:py-0 lg:min-h-[185px] flex items-center relative overflow-hidden fufu before:absolute before:inset-y-0 before:left-0 before:w-[20px] before:z-10 before:bg-gradient-to-l after:absolute after:inset-y-0 after:right-0 after:w-[20px] after:bg-gradient-to-r from-transparent to-main">
             <div class=" bg-main h-full flex items-center shrink-0 gap-[5px] md:gap-[50px] 2xl:gap-[100px] animate-[slideSmall_15s_linear_infinite] md:animate-[slideMedium_15s_linear_infinite] 2xl:animate-[slideLarge_15s_linear_infinite]">
                 <img src="./assets/img/sponsor_a.png" alt="" class="mix-blend-multiply shrink-0 w-[60px] md:w-auto lg:w-[100px] xl:w-auto">

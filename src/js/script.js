@@ -16,22 +16,21 @@ document.addEventListener('click', (e) =>{
     if(e.target.getAttribute("data-name") == "acordeon-button"){
         e.target.parentElement.parentElement.classList.toggle("acordeon-active")
     }
-    console.log(e.target)
 })
 
-document.addEventListener('scroll', () => {
+document.addEventListener('scroll', (e) => {
     if (posicionY > scrollY) { //subiendo
         if(getComputedStyle($navBarButton).display=="none"){
             if(scrollY==0){
                 $navbar.classList.add("lg:absolute")
-                $navbar.classList.remove("fixed","transition-transform","duration-300","drop-shadow")
+                $navbar.classList.remove("transition-transform","duration-300","shadow")
             }else{
-                $navbar.classList.add("transition-transform","duration-300","drop-shadow");
+                $navbar.classList.add("transition-transform","duration-300","shadow");
             }
             $navbar.classList.add("translate-y-0");
             $navbar.classList.remove("-translate-y-full");
         }else if(scrollY==0){
-            $navbar.classList.remove("drop-shadow");
+            $navbar.classList.remove("shadow");
         }
     }
     else if(posicionY < scrollY){  //bajando
@@ -41,7 +40,7 @@ document.addEventListener('scroll', () => {
                 $navbar.classList.remove("lg:absolute","translate-y-0")
             }
         }else{
-            $navbar.classList.add("drop-shadow");
+            $navbar.classList.add("shadow");
         }
     }
     posicionY = scrollY;

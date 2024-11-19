@@ -36,39 +36,31 @@
 @tailwind utilities;
 
 @layer utilities{
+    .scrollbar{
+        scrollbar-color:#e6c744 #ffffff00;
+        scrollbar-width: thin;
+    }
     .back-pay {@apply bg-payday bg-contain bg-no-repeat bg-[-85px] lg:bg-left-bottom 2xl:bg-[-80px];};
     .back-hero {@apply bg-hero bg-contain bg-no-repeat bg-[400px] xl:bg-right-bottom bg-origin-content;};
 
-    .line {
-        fill: none;
-        stroke: currentColor;
-        stroke-width: 10px;
-        stroke-linecap: square;
-        stroke-linejoin: round;
-        transform-origin: 50%;
-        transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
-    }
-    .close {
-        transform: scale(0);
-        transition: transform 300ms;
-    }
-    .active{
-        .line {transition: transform 400ms;}
-        .line--one {transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);}
-        .line--two {transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);}
-        .line--three {transform: translateY(0px) rotate(45deg) scale(.7);}
-        .line--four {transform: translateY(0px) rotate(-45deg) scale(.7);}
-        .line--five {transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);}
-        .line--six {transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);}
-        .close {
-            transition: transform 430ms 100ms;
-            transform: scale(1);
+    .bars {
+        @apply w-[45px] h-[45px] bg-main cursor-pointer rounded-[5px];
+        .line {
+            stroke-width: 10;
+            stroke-linecap: square;
+            transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+            &.top, &.bottom {stroke-dasharray: 40 172;}
+            &.middle {stroke-dasharray: 40 111;}
+        }
+        &.active{
+            .top, .bottom {stroke-dashoffset: -132px;}
+            .middle {stroke-dashoffset: -71px;}
         }
     }
     
     .menu{
-        @apply absolute lg:w-auto inset-x-0 top-0 -translate-y-full lg:translate-y-0  h-screen lg:relative flex flex-col items-center ;
-        @apply lg:h-auto justify-center lg:flex-row -z-10 lg:z-0 overflow-hidden bg-white transition-[transform] duration-200 ease-in delay-[50ms];
+        @apply absolute lg:relative lg:w-auto top-0 h-screen w-full left-0 lg:h-auto -translate-y-full lg:translate-y-0  flex flex-col lg:flex-row items-center justify-center ;
+        @apply -z-10 lg:z-0 bg-white transition-[transform] duration-200 ease-in delay-[50ms];
     }
     .show.menu{
         @apply translate-y-0 transition-[transform] duration-200 delay-0 ease-in;
